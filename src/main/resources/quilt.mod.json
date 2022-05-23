@@ -1,25 +1,26 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "love.marblegate",
+		"id": "homing_ender_eye",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Homing Ender Eye",
+			"description": "Oh Alex...The eye of ender did not disappear or break. It just went to the path homing.",
 			"contributors": {
-				"Me!": "Owner"
+				"MarbleGateKeeper": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://modrinth.com/mod/homing-ender-eye",
+				"issues": "https://github.com/MarbleGateKeeper/HomingEnderEye-Quilt/issues",
+				"sources": "https://github.com/MarbleGateKeeper/HomingEnderEye-Quilt"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/homing_ender_eye/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "love.marblegate.homingendereye.HomingEnderEye",
+			"modmenu": "love.marblegate.homingendereye.misc.ModMenuIntegration"
 		},
 		"depends": [
 			{
@@ -36,5 +37,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "homing_ender_eye.mixins.json"
 }

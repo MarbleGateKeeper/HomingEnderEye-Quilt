@@ -13,6 +13,10 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		url = "https://api.modrinth.com/maven"
+	}
+	maven { url "https://maven.shedaniel.me"}
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -28,6 +32,13 @@ dependencies {
 	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
+
+	modImplementation "maven.modrinth:modmenu:3.2.2"
+	modImplementation "maven.modrinth:cloth-config:6.2.57+fabric"
+
+	// I'm just really confused
+	// I must add cloth-basic-math to dependencies or I won't be able to open config screen in modmenu (since it always crashed!)
+	modApi("me.shedaniel.cloth:basic-math:+")
 }
 
 processResources {
