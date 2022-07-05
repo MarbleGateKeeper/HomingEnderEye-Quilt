@@ -33,8 +33,8 @@ dependencies {
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 
-	modImplementation "maven.modrinth:modmenu:3.2.2"
-	modImplementation "maven.modrinth:cloth-config:6.2.57+fabric"
+	modImplementation "maven.modrinth:modmenu:4.0.0"
+	modImplementation "maven.modrinth:cloth-config:7.0.72+fabric"
 
 	// I'm just really confused
 	// I must add cloth-basic-math to dependencies or I won't be able to open config screen in modmenu (since it always crashed!)
